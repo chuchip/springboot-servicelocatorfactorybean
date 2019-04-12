@@ -9,8 +9,8 @@ import com.springboot.registry.AdapterService;
 public class TruckService implements AdapterService<Vehicle> {
 
 	@Override
-	public void process(Vehicle request) {
+	public String process(Vehicle request) {
 		// TODO Auto-generated method stub
-		System.out.println("inside truck service - " + request.toString());
+		return "inside truck service - " + request.toString();
 	}
 }

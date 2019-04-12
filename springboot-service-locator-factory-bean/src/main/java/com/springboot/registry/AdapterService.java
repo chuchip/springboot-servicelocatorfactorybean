@@ -1,5 +1,5 @@
 package com.springboot.registry;
 
 public interface AdapterService<T> {
-	public void process(T request);
+	public String process(T request);
 }

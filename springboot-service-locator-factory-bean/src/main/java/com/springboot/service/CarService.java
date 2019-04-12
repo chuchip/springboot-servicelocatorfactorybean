@@ -7,10 +7,10 @@ import com.springboot.registry.AdapterService;
 
 @Service("Car")
 public class CarService implements AdapterService<Vehicle> {
-
+	int numeroEjecuciones=1;
+	
 	@Override
-	public void process(Vehicle request) {
-		// TODO Auto-generated method stub
-		System.out.println("inside car service - " + request.toString());
+	public String process(Vehicle request) {		
+		return "inside car service - " + request.toString()+ " Numero Ejecuciones: "+(numeroEjecuciones++);
 	}
 }

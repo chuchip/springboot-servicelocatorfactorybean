@@ -9,7 +9,8 @@ import com.springboot.registry.AdapterService;
 public class BikeService implements AdapterService<Vehicle> {
 
 	@Override
-	public void process(Vehicle request) {
-		System.out.println("inside bike service - " + request.toString());
+	public String process(Vehicle request) {
+		return "inside bike service - " + request.toString();
 	}
+	
 }

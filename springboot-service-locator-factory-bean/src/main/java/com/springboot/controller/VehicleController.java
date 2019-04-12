@@ -16,8 +16,12 @@ public class VehicleController {
 	@Autowired
 	private ServiceRegistry serviceRegistry;
 
+//	@Autowired
+//	private AdapterService adapterService;
+	
 	@PostMapping
-	public void processStudentDetails(@RequestBody Vehicle vehicle) {
-		serviceRegistry.getService(vehicle.getVehicleType()).process(vehicle);
+	public String  processStudentDetails(@RequestBody Vehicle vehicle) {
+		return serviceRegistry.getService(vehicle.getVehicleType()).process(vehicle);
 	}
+	
 }
