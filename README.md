@@ -1,3 +1,7 @@
+Un articulo más actualizado de este proyecto lo teneis en: [http://www.profesor-p.com/2019/04/18/beans-avanzados-en-spring/](http://www.profesor-p.com/2019/04/18/beans-avanzados-en-spring/)
+
+
+
 En esta ocasión he cogido un proyecto de [https://github.com/SimpleProgramming/springboot-servicelocatorfactorybean](https://github.com/SimpleProgramming/springboot-servicelocatorfactorybean) el cual tiene un video en: [https://www.youtube.com/watch?v=rHk5pijFymo](https://www.youtube.com/watch?v=rHk5pijFymo) donde explica como cargar Beans dinámicamente usando Spring.
 
 Imaginemos que tenemos un programa que dependiendo de unos parámetros deba cargar un clase u otro, donde está definida la lógica a seguir.  Por supuesto podemos anidar *condiciones* e instanciar las clases debidas, pero eso tiene un problema y es que si mañana debemos añadir una clase de lógica nueva, deberemos incluir una condición más, y podríamos introducir errores en el código.
