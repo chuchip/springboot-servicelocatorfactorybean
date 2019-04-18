@@ -2,15 +2,13 @@ package com.springboot.service;
 
 import org.springframework.stereotype.Service;
 
-import com.springboot.model.Vehicle;
 import com.springboot.registry.AdapterService;
 
 @Service("Truck")
-public class TruckService implements AdapterService<Vehicle> {
-
+public class TruckService implements AdapterService{
+	int numberExecution=1;
 	@Override
-	public String process(Vehicle request) {
-		// TODO Auto-generated method stub
-		return "inside truck service - " + request.toString();
+	public String process() {
+		return "inside truck service -  number of executions: "+(numberExecution++);
 	}
 }

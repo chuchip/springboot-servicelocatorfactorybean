@@ -1,27 +1,21 @@
 package com.springboot.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springboot.model.Vehicle;
 import com.springboot.registry.ServiceRegistry;
 
 @RestController
-@RequestMapping("/vehicle")
 public class VehicleController {
 
 	@Autowired
 	private ServiceRegistry serviceRegistry;
 
-//	@Autowired
-//	private AdapterService adapterService;
 	
-	@PostMapping
-	public String  processStudentDetails(@RequestBody Vehicle vehicle) {
-		return serviceRegistry.getService(vehicle.getVehicleType()).process(vehicle);
+	@GetMapping("{vehicle}")
+	public String  processGet(@PathVariable String vehicle) {
+		return serviceRegistry.getService(vehicle).process();
 	}
-	
 }

@@ -9,7 +9,6 @@ import com.springboot.registry.ServiceRegistry;
 
 @Configuration
 public class VehicleConfig {
-
 	@Bean
 	public FactoryBean<?> factoryBean() {
 		final ServiceLocatorFactoryBean bean = new ServiceLocatorFactoryBean();
